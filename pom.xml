@@ -16,6 +16,14 @@
     <name>common</name>
     <url>http://common.paradoxical.io</url>
 
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
     <properties>
         <slf4j.version>1.7.10</slf4j.version>
         <lombok.version>1.16.2</lombok.version>

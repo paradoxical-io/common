@@ -14,7 +14,7 @@
     <packaging>jar</packaging>
 
     <name>common</name>
-    <url>http://maven.apache.org</url>
+    <url>http://common.paradoxical.io</url>
 
     <properties>
         <slf4j.version>1.7.10</slf4j.version>

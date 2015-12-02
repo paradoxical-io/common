@@ -1,4 +1,4 @@
-package io.paradoxical.common;
+package io.paradoxical.common.tests;
 
 
 import static org.junit.Assert.assertTrue;

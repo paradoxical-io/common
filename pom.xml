@@ -275,6 +275,10 @@
                                 </goals>
                             </execution>
                         </executions>
+                        <configuration>
+                            <useAgent>true</useAgent>
+                            <keyname>devshorts</keyname>
+                        </configuration>
                     </plugin>
                 </plugins>
             </build>

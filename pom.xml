@@ -43,6 +43,7 @@
     </properties>
 
     <scm>
+        <url>http://github.com/paradoxical-io/common</url>
         <connection>
             scm:git:git@github.com:paradoxical-io/common.git
         </connection>

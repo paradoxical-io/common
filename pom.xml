@@ -10,7 +10,7 @@
     <groupId>io.paradoxical</groupId>
     <artifactId>common</artifactId>
     <description>Paradoxical common tools</description>
-    <version>1.1-SNAPSHOT</version>
+    <version>1.1</version>
     <packaging>jar</packaging>
 
     <name>common</name>
@@ -50,7 +50,7 @@
         <developerConnection>
             scm:git:git@github.com:paradoxical-io/common.git
         </developerConnection>
-      <tag>HEAD</tag>
+      <tag>common-1.1</tag>
   </scm>
 
  <developers>

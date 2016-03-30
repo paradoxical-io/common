@@ -9,10 +9,10 @@ import com.fasterxml.jackson.databind.JsonSerializer;
 import com.fasterxml.jackson.databind.SerializerProvider;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.google.common.base.CharMatcher;
 import io.paradoxical.common.valuetypes.StringValue;
 import io.paradoxical.common.valuetypes.adapters.xml.JaxbStringValueAdapter;
 import jdk.nashorn.internal.ir.annotations.Immutable;
-import org.apache.commons.lang3.StringUtils;
 
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.io.IOException;
@@ -27,7 +27,7 @@ public final class FirstName extends StringValue {
     }
 
     public static FirstName valueOf(String firstName) {
-        return new FirstName(StringUtils.trimToEmpty(firstName));
+        return new FirstName(CharMatcher.WHITESPACE.trimFrom(firstName));
     }
 
     public static class XmlAdapter extends JaxbStringValueAdapter<FirstName> {

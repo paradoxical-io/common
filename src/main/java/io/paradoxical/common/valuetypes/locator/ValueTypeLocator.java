@@ -1,9 +1,10 @@
 package io.paradoxical.common.valuetypes.locator;
 
-import io.paradoxical.common.valuetypes.StringValue;
-import io.paradoxical.common.valuetypes.annotations.WrapsValueType;
+import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
-import com.tguzik.value.Value;
+import io.paradoxical.common.valuetypes.StringValue;
+import io.paradoxical.common.valuetypes.Value;
+import io.paradoxical.common.valuetypes.annotations.WrapsValueType;
 import org.reflections.Reflections;
 import org.reflections.util.ClasspathHelper;
 import org.reflections.util.ConfigurationBuilder;
@@ -21,12 +22,12 @@ public class ValueTypeLocator {
 
 
     public ArrayList<ValueTypeLocatorResult> getValueTypes(String packageName) {
-        final List<URL> packageNames = Lists.newArrayList(ClasspathHelper.forPackage(packageName),
-                                                          ClasspathHelper.forPackage(Value.class.getPackage().getName()),
-                                                          ClasspathHelper.forPackage(StringValue.class.getPackage().getName()))
-                                            .stream()
-                                            .flatMap(Collection::stream)
-                                            .collect(Collectors.toList());
+        final List<URL> packageNames = ImmutableList.of(ClasspathHelper.forPackage(packageName),
+                                                        ClasspathHelper.forPackage(Value.class.getPackage().getName()),
+                                                        ClasspathHelper.forPackage(StringValue.class.getPackage().getName()))
+                                                    .stream()
+                                                    .flatMap(Collection::stream)
+                                                    .collect(Collectors.toList());
 
         final ConfigurationBuilder config = ConfigurationBuilder.build().setUrls(packageNames);
 

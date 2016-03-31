@@ -13,6 +13,7 @@ import io.paradoxical.common.valuetypes.adapters.xml.JaxbUuidValueAdapter;
 import io.paradoxical.common.valuetypes.UuidValue;
 import jdk.nashorn.internal.ir.annotations.Immutable;
 
+import javax.annotation.Nonnull;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.io.IOException;
 import java.util.UUID;
@@ -31,6 +32,7 @@ public final class SequenceId extends UuidValue {
     }
 
     public static class XmlAdapter extends JaxbUuidValueAdapter<SequenceId> {
+        @Nonnull
         @Override
         protected SequenceId createNewInstance(UUID value) {
             return SequenceId.valueOf(value);

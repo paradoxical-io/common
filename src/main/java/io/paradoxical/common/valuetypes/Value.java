@@ -12,8 +12,8 @@ import javax.annotation.Nonnull;
  * not allowing to change the reference to held value. This class cannot give
  * any guarantees about the value itself.
  *
- * @author Tomasz Guzik <tomek@tguzik.com>
- * @see com.tguzik.value.adapters.JaxbValueAdapter
+ * @author Tomasz Guzik tomek@tguzik.com
+ * @see io.paradoxical.common.valuetypes.adapters.xml.JaxbValueAdapter
  * @since 0.1
  */
 @SuppressWarnings("WeakerAccess")

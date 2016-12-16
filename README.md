@@ -13,6 +13,6 @@ To install
 <dependency>
     <groupId>io.paradoxical</groupId>
     <artifactId>common</artifactId>
-    <version>1.1</version>
+    <version>2.0</version>
 </dependency>
 ```
